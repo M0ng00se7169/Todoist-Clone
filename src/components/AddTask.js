@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaRegListAlt, FaRegCalendarAlt } from "react-icons/fa";
+import { FaRegListAlt, FaRegCalendarAlt, FaTimes } from "react-icons/fa";
 import moment from "moment";
 import { firebase } from "../firebase";
 import { useSelectedProjectValue } from "../context";
@@ -86,7 +86,7 @@ export const AddTask = ({
                     setShowQuickAddTask(false)
                   }}
                 >
-                  X
+                  <FaTimes />
                 </span>
               </div>
             </>
@@ -112,7 +112,11 @@ export const AddTask = ({
             type="button"
             className="add-task__submit"
             data-testid="add-task"
-            onClick={() => addTask()}
+            onClick={() => 
+              showQuickAddTask
+                ? addTask() && setShowQuickAddTask(false)
+                : addTask()
+            }
           >
             Add Task
           </button>
