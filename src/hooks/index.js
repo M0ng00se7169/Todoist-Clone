@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import { useState, useEffect } from 'react'
 import { firebase } from '../firebase'
 import moment from 'moment'
@@ -51,7 +52,7 @@ export const useTasks = selectedProject => {
         setArchivedTasks(newTasks.filter(task => task.archived !== false))
       });
 
-      return () => unsubscribe()
+      return () => unsubscribe
   }, [selectedProject])
 
   return { tasks, archivedTasks }
