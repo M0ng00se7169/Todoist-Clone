@@ -15,13 +15,10 @@ export const Tasks = () => {
 
   if (projects && selectedProject && !collatedTasksExist(selectedProject)) {
     projectName = getTitle(projects, selectedProject).name
-    console.log('projectName 1: ', projectName);
-    
   }
 
   if (collatedTasksExist(selectedProject) && selectedProject) {
     projectName = getCollatedTitle(collatedTasks, selectedProject).name
-    console.log('projectName 2: ', projectName);
   }
 
   useEffect(() => {
@@ -29,7 +26,7 @@ export const Tasks = () => {
 
   })
 
-  console.log('tasks', tasks);
+  // console.log('tasks', tasks);
 
   return (
     <div className="tasks" data-testid="tasks">
