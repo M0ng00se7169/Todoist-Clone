@@ -29,6 +29,7 @@ export const ProjectOverlay = ({
                   setProject(project.projectId)
                   setShowProjectOverlay(false)
                 }}
+                aria-label="Select the task project"
               >
                 {project.name}
               </div>
