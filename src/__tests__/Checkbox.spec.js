@@ -5,7 +5,7 @@ import { Checkbox } from "../components/Checkbox";
 // Clean the DOM !
 beforeEach(cleanup);
 
-// Mock my DB 
+// Mock my DB
 jest.mock("../firebase", () => ({
   firebase: {
     firestore: jest.fn(() => ({
@@ -18,16 +18,30 @@ jest.mock("../firebase", () => ({
   }
 }));
 
-
 // Tests are starting here ...
 describe("<Checkbox />", () => {
   describe("Success", () => {
     it("renders the task checkbox", () => {
-      const { queryByTestId, debug } = render(
+      const { queryByTestId } = render(
         <Checkbox id="1" taskDesc="Finish this development" />
       );
-      expect(queryByTestId('checkbox-action')).toBeTruthy()
+      expect(queryByTestId("checkbox-action")).toBeTruthy();
+    });
+
+    it("renders the task checkbox and accepts a onClick", () => {
+      const { queryByTestId } = render(
+        <Checkbox id="1" taskDesc="Finish development" />
+      );
+      expect(queryByTestId("checkbox-action")).toBeTruthy();
+      fireEvent.click(queryByTestId("checkbox-action"));
+    });
+
+    it("renders the task checkbox and accepts a onKeyDown", () => {
+      const { queryByTestId } = render(
+        <Checkbox id="1" taskDesc="Finish development" />
+      );
+      expect(queryByTestId("checkbox-action")).toBeTruthy();
+      fireEvent.keyDown(queryByTestId("checkbox-action"));
     });
   });
 });
-

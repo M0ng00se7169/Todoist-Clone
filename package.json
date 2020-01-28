@@ -15,15 +15,15 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll",
     "eject": "react-scripts eject"
   },
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/index.js",
-      "!src/hooks/*.js",
-      "!src/context/*.js"
+      "!src/hooks/*.js"
+      
     ],
     "coverageThreshold": {
       "global": {
@@ -36,8 +36,7 @@
     "coverageReporters": [
       "html",
       "text"
-    ]
-    
+    ]   
   },
   "browserslist": {
     "production": [

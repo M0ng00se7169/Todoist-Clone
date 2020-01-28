@@ -6,7 +6,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
   showTaskDate && (
     <div className="task-date" data-testid="task-date-overlay">
       <ul className="task-date__list">
-        <li data-testid="task-date-overlay">
+        <li>
           <div
             tabIndex={0}
             role="button"
@@ -19,6 +19,7 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
               setTaskDate(moment().format("DD/MM/YYYY"));
             }}
             aria-label="Select today as the task date"
+            data-testid="task-date-today"
           >
             <span>
               <FaSpaceShuttle />
@@ -26,8 +27,9 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
             <span>Today</span>
           </div>
         </li>
-        <li data-testid="task-date-tommorow">
+        <li>
           <div
+            data-testid="task-date-tomorrow"
             tabIndex={0}
             role="button"
             onClick={() => {
@@ -54,8 +56,9 @@ export const TaskDate = ({ setTaskDate, showTaskDate, setShowTaskDate }) =>
             <span>Tomorrow</span>
           </div>
         </li>
-        <li data-testid="task-date-next-week">
+        <li>
           <div
+            data-testid="task-date-next-week"
             tabIndex={0}
             role="button"
             onClick={() => {

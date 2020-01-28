@@ -29,7 +29,7 @@ export const generatePushId = (() => {
 
     let id = timeStampChars.join('')
 
-    for (var i = 0; i < 12; i++) {
+    for (i = 0; i < 12; i++) {
       id += PUSH_CHARS.charAt(lastRandChars[i])
     }
 
