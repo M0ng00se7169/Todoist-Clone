@@ -12,8 +12,8 @@ export const Projects = ({ activeValue = null }) => {
     projects && projects.map(project => (
       <li
         key={project.projectId}
+        data-testid="project-action-parent"
         data-doc-id={project.docId}
-        data-tesid="project-action"
         className={
           active === project.projectId
           ? "active sidebar__project"
@@ -21,6 +21,7 @@ export const Projects = ({ activeValue = null }) => {
         }
       > 
         <div
+          data-testid="project-action"
           role="button"
           tabIndex={0}
           aria-label={`Select ${project.name} as the task project`}
