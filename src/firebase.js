@@ -6,7 +6,7 @@ const firebaseConfig = firebase.initializeApp({
   apiKey: keys.apiKey,
   authDomain: keys.authDomain,
   databaseURL: keys.databaseURL,
-  projectId: keys.projectId,
+  projectId: "todoist-clone-2aa4b",
   storageBucket: keys.storageBucket,
   messagingSenderId: keys.messagingSenderId,
   appId: keys.appId  
