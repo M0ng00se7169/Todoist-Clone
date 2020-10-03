@@ -4,10 +4,6 @@
 
 <br/>
 
-## To Do: 
--- Authorization <br/>
--- Sidebar responsive
-
 ## How to use it ?
 0:  If you don't have installed NodeJS and NPM on your PC run this command:
 
@@ -44,6 +40,10 @@ npm run test
 https://todoist-cl0ne.herokuapp.com/
 
 <br/><br/>
+
+## To Do: 
+-- Authorization <br/>
+-- Sidebar responsive
 
 ## 📫 Contact 
 Created by <br/>
